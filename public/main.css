@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Slab:wght@300&family=Roboto:ital@0;1&display=swap");
+body {
+  background: #006ec3;
+  margin: 0;
+  font-family: 'Roboto', sans-serif; }
+
+h1.logo {
+  color: #fff;
+  font-family: 'Pacifico', cursive;
+  line-height: 1.5em;
+  text-align: center;
+  font-size: 4em; }
+
+h1.end {
+  margin: 20px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  opacity: 0;
+  transition: 0.8s ease-in-out; }
+
+#container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center; }
+
+#form-box {
+  background: #fff;
+  position: relative;
+  width: 600px;
+  margin-top: 100px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.1), 0 6px 10px 5px rgba(0, 0, 0, 0.1), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.1s ease-in-out; }
+
+.close #next-btn, .close #prev-btn {
+  color: #fff; }
+
+#form-box.close {
+  width: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: 0.8s ease-in-out;
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0); }
+
+#next-btn {
+  position: absolute;
+  right: 20px;
+  bottom: 5px;
+  font-size: 20px;
+  float: right;
+  color: #0a4778;
+  cursor: pointer;
+  z-index: 2; }
+  #next-btn:hover {
+    color: #006ec3; }
+
+#prev-btn {
+  position: absolute;
+  font-size: 18px;
+  left: 30px;
+  top: 12px;
+  z-index: 2;
+  color: #0a4778;
+  float: right;
+  cursor: pointer; }
+  #prev-btn:hover {
+    color: #006ec3; }
+
+#input-group {
+  position: relative;
+  padding: 30px 20px 20px 20px;
+  margin: 10px 60px 10px 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; }
+  #input-group input {
+    position: relative;
+    width: 100%;
+    border: none;
+    font-size: 10px;
+    font-weight: normal;
+    outline: 0;
+    background: transparent;
+    box-shadow: none; }
+  #input-group #input-label {
+    position: absolute;
+    pointer-events: none;
+    top: 6px;
+    left: 42px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #111;
+    transition: 0.2s ease-in-out; }
+
+#input-progress {
+  border-bottom: 3px solid #006ec3;
+  width: 0;
+  transition: width 0.6s ease-in-out; }
+
+#progress-bar {
+  position: absolute;
+  background: #0a4778;
+  height: 10px;
+  width: 0;
+  transition: width 0.5s ease-in-out; }
+
+.error #input-progress {
+  border-color: #ff2d2c; }
+
+.error #next-btn {
+  color: #ff2d2c; }
+
+@media (max-width: 600px) {
+  #form-box {
+    width: 80%; }
+  h1.logo {
+    margin-top: 150px;
+    font-size: 2em; }
+  h1.end {
+    font-size: 12px; } }
