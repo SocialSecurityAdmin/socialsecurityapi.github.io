@@ -1,6 +1,6 @@
 const express = require('express');
 const { default: mongoose } = require('mongoose');
-const cor = require("cors")
+const cors = require("cors")
 const userModel = require('./model')
 const port = process.env.PORT || 5000;  //this is our port number
 const CONN_URL = "mongodb+srv://Otunba:grammy01@cluster0.o7zcoje.mongodb.net/my_db?retryWrites=true&w=majority"
