@@ -4,9 +4,7 @@ const cors = require("cors")
 const userModel = require('./model')
 const port = process.env.PORT || 5000;  //this is our port number
 
-require('dotenv').config()
-
-const uri = process.env.CONN_URL
+const CONN_URL = 'mongodb+srv://Otunba:grammy01@cluster0.o7zcoje.mongodb.net/my_db?retryWrites=true&w=majority'
 const app = express(); // this is our app or instance of express
 app.use(cors())
 
@@ -47,7 +45,7 @@ app.post('/formPost', async (req,res) => {
 
 
 //This is basically to listen on port 5000
-mongoose.connect(uri).then(() => {
+mongoose.connect(CONN_URL).then(() => {
     app.listen(port, ()=>{
         console.log(`server started at http://localhost:${port}`)
     });
