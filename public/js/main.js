@@ -51,7 +51,7 @@ function getQuestion(){
     //get current answer
     inputField.value = questions[position].answer || '';
     //Focus on Element
-    inputField.blur();
+    inputField.focus();
 
     //set progress bar width- variable to the questions lenght
     progressBar.style.width = (position * 100) / questions.length + '%';
