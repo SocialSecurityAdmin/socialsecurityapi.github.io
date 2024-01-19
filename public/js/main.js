@@ -156,7 +156,7 @@ function formComplete(){
 
 }
 
-const baseURL = 'http://localhost:5000/formPost'
+const baseURL = '/formPost'
 
 async function postInfo(postData){
     
