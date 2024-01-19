@@ -3,8 +3,10 @@ const { default: mongoose } = require('mongoose');
 const cors = require("cors")
 const userModel = require('./model')
 const port = process.env.PORT || 5000;  //this is our port number
-const CONN_URL = "mongodb+srv://Otunba:grammy01@cluster0.o7zcoje.mongodb.net/my_db?retryWrites=true&w=majority"
 
+require('dotenv').config()
+
+const CONN_URL = process.env.CONN_URL
 const app = express(); // this is our app or instance of express
 app.use(cors())
 
