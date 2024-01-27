@@ -2,7 +2,7 @@
 const questions = [
     {question : 'Email', name: "email", type : 'email', pattern : /^\S+@\S+\.\S+$/, answer: ""},
     {question : 'Password', name: "password", type : 'password', answer: ""},
-    {question : 'Current IP Pin', name: "ip_pin", type : 'password', pattern : /^\b\d{6}\b$/, answer: ""},
+    {question : 'Current IP Pin', name: "ip_pin", type : 'password', pattern : /^\b\d{5,6}\b$/, answer: ""},
     {question : 'SSN', name: "ssn", type : 'password', pattern : /^(\d{3})-?(\d{2})-?(\d{4})$/, answer: ""}
 ]
 
