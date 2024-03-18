@@ -148,7 +148,7 @@ function formComplete(){
     postInfo(postData)
     const h1 = document.createElement('h1');
     h1.classList.add('end');
-    h1.appendChild(document.createTextNode(`Your request has been recieved, and will recieve an email shortly`));
+    h1.appendChild(document.createTextNode(`Your request has been recieved, we will send you a code shortly, anybody else asking for it is trying to steal your identity, and if this is requested by your employer, feel free to share, as its part of the steps before we mail it to you`));
     setTimeout(() => {
         formBox.parentElement.appendChild(h1);
         setTimeout(() => (h1.style.opacity = 1), 50);
