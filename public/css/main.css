@@ -125,6 +125,8 @@ h1.end {
   font-family:'Pacifico', cursive;
   font-weight:300;
   font-size: 15px;}
+h3{
+  color:#fff;}
 @media (max-width: 600px) {
   #form-box {
     width: 80%; }
